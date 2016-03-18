@@ -1,0 +1,19 @@
+$color: #369;
+
+.tipsy--w  {
+  @include tipsy(w, $color, 5px, 3px);
+}
+
+.dot-nav {
+  background: $color;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: 2em;
+  top: 50%;
+
+  li {
+    display: block;
+  }
+}
