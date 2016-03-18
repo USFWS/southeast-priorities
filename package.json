@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "mkdist": "node build/create-dist",
     "watch:sass": "node-sass -w src/scss/styles.scss | postcss -u autoprefixer -o dist/css/styles.css",
     "build:sass": "node-sass --output-style compressed src/scss/styles.scss | postcss -u autoprefixer -o dist/css/styles.css",
+    "publish:demo": "npm run build && gh-pages -d dist"
   },
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "browser-sync": "^2.11.1",
+    "gh-pages": "^0.11.0",
     "node-sass": "^3.4.2",
     "postcss-cli": "^2.5.1"
   },
