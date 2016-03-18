@@ -3,12 +3,25 @@
   "version": "1.0.0",
   "description": "An interactive website outlining the USFWS Southeast Region's Priorities",
   "main": "index.js",
+  "watch": {
+    "hugo:dev": {
+      "patterns": ["site/**/*"],
+      "extensions": "html,md,ace,css,js"
+    }
+  },
   "scripts": {
+    "watch": "npm-watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "mkdist": "node build/create-dist",
-    "watch:sass": "node-sass -w src/scss/styles.scss | postcss -u autoprefixer -o dist/css/styles.css",
-    "build:sass": "node-sass --output-style compressed src/scss/styles.scss | postcss -u autoprefixer -o dist/css/styles.css",
-    "publish:demo": "npm run build && gh-pages -d dist"
+    "hugo:dev": "node build/hugo -- /",
+    "hugo:stage": "node build/hugo -- https://intranet.fws.gov/region4/demo/",
+    "hugo:pro": "node build/hugo -- http://www.fws.gov/southeast/",
+    "watch:sass": "node-sass -w src/scss/styles.scss | postcss -u autoprefixer -o site/static/css/styles.css",
+    "build:sass": "node-sass --output-style compressed src/scss/styles.scss | postcss -u autoprefixer -o site/static/css/styles.css",
+    "serve": "browser-sync start --server dist --files 'dist/**/*'",
+    "publish:demo": "npm run build && gh-pages -d dist",
+    "prestart": "npm run mkdist",
+    "start": "npm run watch:sass & npm run hugo:dev & npm run watch & npm run serve"
   },
   "dependencies": {},
   "devDependencies": {
