@@ -1,0 +1,21 @@
+{
+  "name": "priorities",
+  "version": "1.0.0",
+  "description": "An interactive website outlining the USFWS Southeast Region's Priorities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass -w src/scss/styles.scss | postcss -u autoprefixer -o dist/css/styles.css",
+    "build:sass": "node-sass --output-style compressed src/scss/styles.scss | postcss -u autoprefixer -o dist/css/styles.css",
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "browser-sync": "^2.11.1",
+    "node-sass": "^3.4.2",
+    "postcss-cli": "^2.5.1"
+  },
+  "keywords": [],
+  "author": "Roy Hewitt, @r0yhewitt",
+  "license": "SAX-PD"
+}
