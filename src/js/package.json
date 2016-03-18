@@ -1,0 +1,19 @@
+{
+  "name": "priorities.js",
+  "version": "1.0.0",
+  "description": "Script for the priorities webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browserify": "browserify index.js | uglifyjs -mc > ../../site/static/js/priorities.js",
+    "watchify": "watchify index.js -o ../../site/static/js/priorities.js -dv"
+  },
+  "author": "Roy Hewitt, @r0yhewitt",
+  "license": "SAX-PD",
+  "dependencies": {
+    "events": "^1.1.0",
+    "lodash.defaults": "^4.0.1",
+    "lodash.foreach": "^4.1.0",
+    "zenscroll": "^3.0.1"
+  }
+}
