@@ -5,7 +5,9 @@
   "main": "index.js",
   "watch": {
     "hugo:dev": {
-      "patterns": ["site/**/*"],
+      "patterns": [
+        "site/**/*"
+      ],
       "extensions": "html,md,ace,css,js"
     }
   },
@@ -14,12 +16,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "mkdist": "node build/create-dist",
     "hugo:dev": "node build/hugo -- /",
-    "hugo:stage": "node build/hugo -- https://intranet.fws.gov/region4/demo/",
-    "hugo:pro": "node build/hugo -- http://www.fws.gov/southeast/",
-    "watch:sass": "node-sass -w src/scss/styles.scss | postcss -u autoprefixer -o site/static/css/styles.css",
+    "hugo:stage": "node build/hugo -- https://intranet.fws.gov/region4/priorities/",
+    "hugo:pro": "node build/hugo -- http://www.fws.gov/southeast/priorities/",
+    "watch:sass": "node-sass -w src/scss/styles.scss site/static/css/styles.css",
     "build:sass": "node-sass --output-style compressed src/scss/styles.scss | postcss -u autoprefixer -o site/static/css/styles.css",
     "serve": "browser-sync start --server dist --files 'dist/**/*'",
     "publish:demo": "npm run build && gh-pages -d dist",
+    "prebuild": "npm run mkdist",
+    "build": "npm run build:sass && npm run hugo:pro",
     "prestart": "npm run mkdist",
     "start": "npm run watch:sass & npm run hugo:dev & npm run watch & npm run serve"
   },
