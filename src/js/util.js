@@ -4,6 +4,7 @@
   module.exports = {
     defaults: require('lodash.defaults'),
     each: require('lodash.foreach'),
+    slugify: require('underscore.string/slugify'),
     get: get,
     getStyle: getStyle,
     create: create,
