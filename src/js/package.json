@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "browserify": "browserify index.js | uglifyjs -mc > ../../site/static/js/priorities.js",
-    "watchify": "watchify index.js -o ../../site/static/js/priorities.js -dv"
+    "watchify": "watchify index.js -o ../../site/static/js/priorities.js -dv",
+    "inspect:bundle": "browserify --full-paths index.js | uglifyjs -mc | Discify --open"
   },
   "author": "Roy Hewitt, @r0yhewitt",
   "license": "SAX-PD",
@@ -14,6 +15,11 @@
     "events": "^1.1.0",
     "lodash.defaults": "^4.0.1",
     "lodash.foreach": "^4.1.0",
+    "underscore.string": "^3.3.4",
     "zenscroll": "^3.0.1"
+  },
+  "devDependencies": {
+    "disc": "^1.3.2",
+    "uglifyjs": "^2.4.10"
   }
 }
