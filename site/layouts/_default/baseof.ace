@@ -5,7 +5,7 @@ html lang=en_US
   body.wrapper
     a#skip-to-content href=#content skip to content
     = include partials/header.html .
-    .container.layout#content
+    .container#content
       = yield main
     = include partials/footer.html .
     = include partials/analytics.html .
