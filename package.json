@@ -14,7 +14,10 @@
   },
   "scripts": {
     "watch": "npm-watch",
+    "presvgo": "rimraf site/static/images/svg",
     "svgo": "svgo -f src/images/svg -o site/static/images/svg",
+    "prehero": "rimraf site/static/images/hero",
+    "hero": "node build/resize-hero",
     "test": "echo \"Error: no test specified\" && exit 1",
     "mkdist": "node build/create-dist",
     "hugo:dev": "node build/hugo -- /",
@@ -31,7 +34,10 @@
   },
   "dependencies": {
     "d3": "^3.5.16",
-    "url-slug": "^1.1.0"
+    "scrollmagic": "^2.0.5",
+    "scrollreveal": "^3.1.1",
+    "underscore.string": "^3.3.4",
+    "zenscroll": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
@@ -40,6 +46,8 @@
     "mkdirp": "^0.5.1",
     "node-sass": "^3.4.2",
     "postcss-cli": "^2.5.1",
+    "rimraf": "^2.5.2",
+    "sharp": "^0.13.1",
     "svgo": "^0.6.3"
   },
   "keywords": [],
