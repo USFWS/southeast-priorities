@@ -1,6 +1,8 @@
 (function () {
   'use strict';
   var sharp = require('sharp');
+  var Imagemin = require('imagemin');
+  var rename = require('gulp-rename');
   var mkdirp = require('mkdirp');
   var fs = require('fs');
 
@@ -13,20 +15,27 @@
   if (i > -1) images.splice(i,1);
 
   // Ensure the output dir exists
-  images.forEach(function (name) {
-    var dist = output + name.replace('.jpg', '/');
+  mkdirp(output, function(err) {
+    if (err) console.error(err);
 
-    mkdirp(dist, function (err) {
-      if (err) console.error(err);
-
+    images.forEach(function (name) {
       var img = sharp(input + name);
       img
         .resize(1400)
-        .toFile(dist + '1400.jpg');
-      // img
-      //   .resize(400)
-      //   .toFile(dist + '400.jpg');
+        .toBuffer(function (err, buffer, info) {
+          if (err) console.error(err);
+          jpegmin(buffer, name);
+        });
     });
   });
+
+  function jpegmin(buffer, name) {
+    new Imagemin()
+      .src(buffer)
+      .dest(output)
+      .use(Imagemin.jpegtran({ progressive: true }))
+      .use(rename(name))
+      .run();
+  }
 
 })();
