@@ -1,19 +1,35 @@
-$color: #369;
-
 .tipsy--w  {
-  @include tipsy(w, $color, 5px, 3px);
+  @include tipsy(w, $turquoise, 5px, 5px);
 }
 
 .dot-nav {
-  background: $color;
   list-style: none;
   margin: 0;
   padding: 0;
   position: fixed;
-  right: 2em;
-  top: 50%;
+  right: 20px;
+  top: 45vh;
+
+  a {
+    display: block;
+    height: 15px;
+    width: 15px;
+  }
 
   li {
     display: block;
+    margin-bottom: 5px;
+
+    &.inactive {
+      background: url('../images/svg/inactive.svg');
+      height: 15px;
+      width: 15px;
+    }
+
+    &.active {
+      background: url('../images/svg/active.svg');
+      height: 15px;
+      width: 15px;
+    }
   }
 }

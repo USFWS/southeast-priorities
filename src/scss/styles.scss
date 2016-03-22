@@ -1,19 +1,57 @@
 @import "variables";
+@import "mixins";
+@import "typography";
 @import "tipsy";
 @import "susy";
 @import "fonts";
 @import "layout";
 @import "dot-nav";
+@import "parallax";
+@import "swipe";
+@import "icons";
 
 html {
-  font-family: 'Source Sans', Helvetica, 'Helvetica Neue', Arial, sans-serif;
+  box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Merriweather', Georgia, Verdana, serif;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  margin: auto;
+  max-width: 100%;
+}
+
+.caption {
+  color: $turquoise;
+  font-size: .8em;
+  text-align: center;
+}
+
+.reveal {
+  display: block;
+  margin: auto;
+}
+
+.title {
+  font-size: 3em;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 4em;
+  text-align: center;
+}
+
+#skip-to-content {
+  @include sr-only;
 }
