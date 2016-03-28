@@ -26,7 +26,7 @@
     "mkdist": "node build/create-dist",
     "hugo:dev": "node build/hugo -- /",
     "stage": "node build/stage",
-    "hugo:stage": "node build/hugo -- https://intranet.fws.gov/region4/priorities/ && npm run stage",
+    "hugo:stage": "node build/hugo -- https://intranet.fws.gov/region4/priorities/",
     "hugo:pro": "node build/hugo -- http://www.fws.gov/southeast/regional-priorities/",
     "watch:sass": "node-sass -w src/scss/styles.scss site/static/css/styles.css",
     "build:sass": "node-sass --output-style compressed src/scss/styles.scss | postcss -u autoprefixer -o site/static/css/styles.css",
@@ -34,7 +34,7 @@
     "publish:demo": "npm run build && gh-pages -d dist",
     "prebuild": "npm run mkdist",
     "build": "npm run build:sass && npm run img && npm run hugo:pro",
-    "build:stage": "npm run build:sass && npm run img && npm run hugo:stage",
+    "build:stage": "npm run build:sass && npm run img && npm run hugo:stage && npm run stage",
     "prestart": "npm run mkdist",
     "start": "npm run watch:sass & npm run img & npm run hugo:dev & npm run watch & npm run serve"
   },
