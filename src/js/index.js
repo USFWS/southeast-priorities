@@ -6,6 +6,8 @@
   var fitText = require('./fittext');
   var dots = require('./dots');
   var nav = require('./nav');
+  var lists = require('./short-list');
+  var _ = require('./util');
   // var graph = require('./graph');
 
   // Scroll speed and offset (offset is for fixed navigation)
@@ -28,7 +30,19 @@
     showHeadline: false
   });
 
+  lists.init({
+    elements: document.querySelectorAll('.fade-list')
+  });
+
   // graph.init();
+
+  _.each(document.querySelectorAll('.download-link'), function(link) {
+    link.addEventListener('click', recordDownload);
+  });
+
+  function recordDownload () {
+    ga('send', 'event', 'Priorities Document', 'download');
+  }
 
   document.addEventListener('DOMContentLoaded', domReady);
 
