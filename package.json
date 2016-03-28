@@ -16,8 +16,8 @@
   },
   "scripts": {
     "watch": "npm-watch",
-    "presvgo": "rimraf site/static/images/svg",
-    "svgo": "svgo -f src/images/svg -o site/static/images/svg",
+    "presvgo": "rimraf site/layouts/svg",
+    "svgo": "svgo -f src/images/svg -o site/layouts/svg",
     "prehero": "rimraf site/static/images/hero",
     "hero": "node build/resize-hero",
     "jpg": "imagemin src/images/other site/static/images -P jpegtran",
@@ -25,7 +25,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "mkdist": "node build/create-dist",
     "hugo:dev": "node build/hugo -- /",
-    "hugo:stage": "node build/hugo -- https://intranet.fws.gov/region4/priorities/",
+    "stage": "node build/stage",
+    "hugo:stage": "node build/hugo -- https://intranet.fws.gov/region4/priorities/ && npm run stage",
     "hugo:pro": "node build/hugo -- http://www.fws.gov/southeast/regional-priorities/",
     "watch:sass": "node-sass -w src/scss/styles.scss site/static/css/styles.css",
     "build:sass": "node-sass --output-style compressed src/scss/styles.scss | postcss -u autoprefixer -o site/static/css/styles.css",
@@ -33,6 +34,7 @@
     "publish:demo": "npm run build && gh-pages -d dist",
     "prebuild": "npm run mkdist",
     "build": "npm run build:sass && npm run img && npm run hugo:pro",
+    "build:stage": "npm run build:sass && npm run img && npm run hugo:stage",
     "prestart": "npm run mkdist",
     "start": "npm run watch:sass & npm run img & npm run hugo:dev & npm run watch & npm run serve"
   },
@@ -46,11 +48,13 @@
     "mkdirp": "^0.5.1",
     "node-sass": "^3.4.2",
     "postcss-cli": "^2.5.1",
+    "replace-in-file": "^1.0.2",
     "rimraf": "^2.5.2",
     "sharp": "^0.13.1",
     "svgo": "^0.6.3"
   },
   "keywords": [],
   "author": "Roy Hewitt, @r0yhewitt",
-  "license": "SAX-PD"
+  "license": "SAX-PD",
+  "dependencies": {}
 }
