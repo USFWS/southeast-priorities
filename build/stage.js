@@ -5,8 +5,8 @@
 
   replace({
     files: 'dist/index.html',
-    replace: 'style="background-image: url(\'../',
-    with: 'style="background-image: url(\'http://intranet.fws.gov/'
+    replace: /style="background-image: url\('..\/images\/hero\//g,
+    with: 'style="background-image: url(\'https://intranet.fws.gov/region4/priorities/images/hero/'
   }, function(err, changedFiles) {
     if (err) return console.error(err);
     console.log('Modified files:', changedFiles.join(', '));
