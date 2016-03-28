@@ -37,6 +37,12 @@ p {
   }
 }
 
+li {
+  strong {
+    color: $green;
+  }
+}
+
 a {
   color: $action-color;
   transition: color $base-duration $base-timing;

@@ -1,7 +1,8 @@
 = content main
 
-  figure.js-Parallaxify style="background-image: url('../images/hero/hero-intro.jpg');"
-    img.logo src="./images/svg/logo.svg" alt="The official logo of the U.S. Fish and Wildlife Service"
+  a href="http://fws.gov/southeast"
+    figure.js-Parallaxify style="background-image: url('../images/hero/hero-intro.jpg');"
+      img.logo src="./images/svg/logo.svg" alt="The official logo of the U.S. Fish and Wildlife Service"
 
   h1.title Southeast Region <br> Fiscal Years <br> 2016 - 2018 <br> Regional Priorities
 
@@ -9,9 +10,9 @@
 
   div.document-download
     p
-      a href="./pdf/usfws-southeast-2016-2018-priorities.pdf" Download this as a printable PDF
+      a.download-link href="./pdf/usfws-southeast-2016-2018-priorities.pdf" download="USFWS-Southeast-Priorities-2016-2018.pdf" Download this as a printable PDF
     p
-      a href="./pdf/usfws-southeast-2016-2018-priorities.pdf"
+      a.download-link href="./pdf/usfws-southeast-2016-2018-priorities.pdf" download="USFWS-Southeast-Priorities-2016-2018.pdf"
         img src="./images/svg/pdf.svg" alt="PDF Icon"
 
 
@@ -74,35 +75,43 @@
 
     .center
       h3 Communication
-      = include svg/comment.svg
+      div.reveal
+        = include svg/comment.svg
       p Our actions are based on open and honest dialogue.
 
       h3 Science
-      = include svg/flask.svg
+      div.reveal
+        = include svg/flask.svg
       p Our work is grounded in credible, objective science.
 
       h3 Stewardship
-      = include svg/leaf.svg
+      div.reveal
+        = include svg/leaf.svg
       p Our commitment is to conserve natural resources for future generations.
 
       h3 Service
-      = include svg/flag.svg
+      div.reveal
+        = include svg/flag.svg
       p It is our privilege to serve the American people.
 
       h3 Professionalism
-      = include svg/briefcase.svg
+      div.reveal
+        = include svg/briefcase.svg
       p We hold ourselves to the highest ethical standards, strive for excellence, and respect others.
 
       h3 Partnerships
-      = include svg/user.svg
+      div.reveal
+        = include svg/user.svg
       p We emphasize partnerships using creative and innovative approaches, where needed.
 
       h3 People
-      = include svg/users.svg
+      div.reveal
+        = include svg/users.svg
       p We recognize our employees, volunteers, and partners as critical to our conservation success.
 
       h3 Legacy
-      = include svg/globe.svg
+      div.reveal
+        = include svg/globe.svg
       p Our goal is to ensure the future of natural resource conservation by connecting people with nature.
 
     p
@@ -133,35 +142,45 @@
 
   .layout.center
     p Time is urgent. We must act now.
-    = include svg/clock.svg
+    div.reveal
+      = include svg/clock.svg
 
     p Cities are getting bigger.
-    = include svg/building.svg
+    div.reveal
+      = include svg/building.svg
 
     p Rural communities are getting smaller.
-    = include svg/home.svg
+    div.reveal
+      = include svg/home.svg
     // img.icon.arrow-down src="./images/svg/arrow-up.svg" alt="Arrow down icon"
 
     p Sea levels are rising.
-    = include svg/anchor.svg
+    div.reveal
+      = include svg/anchor.svg
 
     p Storms are becoming shorter and more intense.
-    = include svg/lightning.svg
+    div.reveal
+      = include svg/lightning.svg
 
     p Land use changes are occurring rapidly.
-    = include svg/map.svg
+    div.reveal
+      = include svg/map.svg
 
     p The pace of habitat loss and fragmentation is increasing.
-    = include svg/graph.svg
+    div.reveal
+      = include svg/graph.svg
 
     p The increased occurrence and abundance of invasive species are consuming natural resources at an alarming rate.
-    = include svg/paw.svg
+    div.reveal
+      = include svg/paw.svg
 
     p Poor water quality and competing demands for water are a growing challenge for our Region's people and its fish and wildlife simultaneously.
-    = include svg/warning.svg
+    div.reveal
+      = include svg/warning.svg
 
     p And finally the pressures of society have disconnected large chunks of our region’s population from nature and the outdoors.
-    = include svg/binoculars.svg
+    div.reveal
+      = include svg/binoculars.svg
 
   .layout
 
@@ -169,7 +188,7 @@
 
     p It gives us a reference point to crystalize our desire to influence what the desired future landscape across the Southeast might look like and also a way to begin measuring the effectiveness of our efforts.
 
-  img.reveal src="../images/hero/emerging-megaregions-map-FHWA.jpg" style="width:100%;"
+  img.reveal src="./images/hero/emerging-megaregions-map-FHWA.jpg" style="width:100%;"
 
   .layout
 
@@ -207,6 +226,8 @@
       li Support employee professional development.
       li Recruit and retain a highly qualified, diverse and highly engaged workforce.
 
+    img.reveal src="./images/student-conservation-association.jpg" alt="A group of students poses for a photo in front a a stream"
+
     p
       em Examples
 
@@ -225,6 +246,8 @@
       li Maintain our collaboration with State Fish and Wildlife Agencies and other Federal Agencies.
       li Increase our collaboration with international governments, non‐governmental conservation organizations and private landowners.
 
+    img.reveal src="./images/priorities-partners.jpg" alt="A biologist wearing a yellow hard hat in a forest"
+
     p
       em Examples
 
@@ -241,6 +264,8 @@
       li Increase our efforts to connect people with nature.
       li Increase our efforts in urban areas.
       li Increase our support for volunteers and Friends Groups.
+
+    img.reveal src="./images/priorities-public.jpg" alt="Elementary school students pose for a photo holding a sea turtle"
 
     p
       em Examples
@@ -293,6 +318,8 @@
       li Continue to protect and recover threatened and endangered species, including federal, state, and CITES.
       li Continue to protect, restore, and manage birds of conservation concern.
 
+    img.reveal src="./images/priorities-at-risk.jpg" alt="A monarch butterfly collecting nectar from a bright purple flower"
+
     p
       em Examples
 
@@ -307,6 +334,8 @@
     ul
       li Continue to conserve common species includes migratory and interjurisdictional fish and wildlife
 
+    img.reveal src="./images/priorities-just-right.jpg" alt="A close-up photo of a bald eagle's head and beak"
+
     p
       em Examples
 
@@ -319,6 +348,8 @@
 
     ul
       li Continue to reduce overabundant fish, wildlife, and plants - includes invasive species.
+
+    img.reveal src="./images/priorities-too-many.jpg" alt="A wild hog with dark hair looks towards the photographer"
 
     p
       em Examples
@@ -347,7 +378,7 @@
 
     div.document-download
       p
-        a href="./pdf/usfws-southeast-2016-2018-priorities.pdf" Download this as a printable PDF
+        a.download-link href="./pdf/usfws-southeast-2016-2018-priorities.pdf" download="USFWS-Southeast-Priorities-2016-2018.pdf" Download this as a printable PDF
       p
-        a href="./pdf/usfws-southeast-2016-2018-priorities.pdf"
+        a.download-link href="./pdf/usfws-southeast-2016-2018-priorities.pdf" download="USFWS-Southeast-Priorities-2016-2018.pdf"
           img src="./images/svg/pdf.svg" alt="PDF Icon"
