@@ -1,123 +1,187 @@
 (function () {
   'use strict';
 
-  module.exports = {
+  var _ = {
+    each: require('lodash.forEach'),
+    filter: require('lodash.filter'),
+    isDom: require('is-dom'),
+    debounce: require('lodash.debounce'),
     defaults: require('lodash.defaults'),
-    each: require('lodash.foreach'),
-    slugify: require('underscore.string/slugify'),
-    get: get,
-    getStyle: getStyle,
-    create: create,
+    isArray: require('lodash.isArray'),
+    parents: parents,
+    offset: offset,
     remove: remove,
-    empty: empty,
-    toFront: toFront,
-    toBack: toBack,
+    removeClass: removeClass,
+    getWindowSize: getWindowSize,
+    is: is,
+    nextUntil: nextUntil,
+    unwrap: unwrap,
+    wrapAll: wrapAll,
     hasClass: hasClass,
+    addClass: addClass,
     splitWords: splitWords,
     trim: trim,
-    addClass: addClass,
-    removeClass: removeClass,
     setClass: setClass,
-    getClass: getClass
+    getClass: getClass,
+    create: create
   };
 
-	function get(id) {
-		return typeof id === 'string' ? document.getElementById(id) : id;
-	}
+  module.exports = _;
 
-	function getStyle(el, style) {
+  function parents(els, filter) {
+    var allParents = [];
+    if ( !_.isArray(els) ) els = [els];
+    _.each(els, function (el) {
+      if ( _.hasClass(el.parentNode, filter) )
+        allParents.push(el.parentNode);
+    });
+    return allParents;
+  }
 
-		var value = el.style[style] || (el.currentStyle && el.currentStyle[style]);
+  function is(nodeList, selector) {
+    [].some.call(nodeList, function (node) {
+        return node.matches(selector);
+    });
+  }
 
-		if ((!value || value === 'auto') && document.defaultView) {
-			var css = document.defaultView.getComputedStyle(el, null);
-			value = css ? css[style] : null;
-		}
+  function nextUntil(el, untilEl) {
+    var next = [],
+        until = true;
 
-		return value === 'auto' ? null : value;
-	}
+    while (el = el.nextElementSibling) {
+      (until && el && !el.matches(untilEl)) ? next.push(el) : until = false;
+    }
+    return next;
+  }
 
-	function create(tagName, className, container) {
+  function unwrap(el) {
+    var parent = el.parentNode;
+    while (el.firstChild) parent.insertBefore(el.firstChild, el);
+    parent.removeChild(el);
+  }
 
-		var el = document.createElement(tagName);
-		el.className = className;
+  function wrapAll(options) {
+    var wrapper = document.createElement(options.wrapEl);
+    wrapper.setAttribute('id', options.id);
+    addClass(wrapper, options.class);
+    options.elms[0].parentNode.appendChild(wrapper);
+    _.each(options.elms, function (el) {
+      wrapper.appendChild(el);
+    });
 
-		if (container) {
-			container.appendChild(el);
-		}
+    return wrapper;
+  }
 
-		return el;
-	}
+  function removeClass(el, name) {
+    if (el.classList !== undefined) {
+      el.classList.remove(name);
+    } else {
+      setClass(el, trim((' ' + getClass(el) + ' ').replace(' ' + name + ' ', ' ')));
+    }
+  }
 
-	function remove(el) {
-		var parent = el.parentNode;
-		if (parent) {
-			parent.removeChild(el);
-		}
-	}
+  function remove(el) {
+    var parent = el.parentNode;
+    if (parent) {
+      parent.removeChild(el);
+    }
+  }
 
-	function empty(el) {
-		while (el.firstChild) {
-			el.removeChild(el.firstChild);
-		}
-	}
+  function hasClass(el, name) {
+    if (el.classList !== undefined) {
+      return el.classList.contains(name);
+    }
+    var className = getClass(el);
+    return className.length > 0 && new RegExp('(^|\\s)' + name + '(\\s|$)').test(className);
+  }
 
-	function toFront(el) {
-		el.parentNode.appendChild(el);
-	}
+  function splitWords(str) {
+    return trim(str).split(/\s+/);
+  }
 
-	function toBack(el) {
-		var parent = el.parentNode;
-		parent.insertBefore(el, parent.firstChild);
-	}
+  function trim(str) {
+    return str.trim ? str.trim() : str.replace(/^\s+|\s+$/g, '');
+  }
 
-	function hasClass(el, name) {
-		if (el.classList !== undefined) {
-			return el.classList.contains(name);
-		}
-		var className = this.getClass(el);
-		return className.length > 0 && new RegExp('(^|\\s)' + name + '(\\s|$)').test(className);
-	}
+  function addClass(el, name) {
+    if (el.classList !== undefined) {
+      var classes = splitWords(name);
+      for (var i = 0, len = classes.length; i < len; i++) {
+        el.classList.add(classes[i]);
+      }
+    } else if (!hasClass(el, name)) {
+      var className = getClass(el);
+      setClass(el, (className ? className + ' ' : '') + name);
+    }
+  }
 
-	function splitWords(str) {
-		return this.trim(str).split(/\s+/);
-	}
+  function setClass(el, name) {
+    if (el.className.baseVal === undefined) {
+      el.className = name;
+    } else {
+      // in case of SVG element
+      el.className.baseVal = name;
+    }
+  }
 
-	function trim(str) {
-		return str.trim ? str.trim() : str.replace(/^\s+|\s+$/g, '');
-	}
+  function getClass(el) {
+    return el.className.baseVal === undefined ? el.className : el.className.baseVal;
+  }
 
-	function addClass(el, name) {
-		if (el.classList !== undefined) {
-			var classes = this.splitWords(name);
-			for (var i = 0, len = classes.length; i < len; i++) {
-				el.classList.add(classes[i]);
-			}
-		} else if (!this.hasClass(el, name)) {
-			var className = this.getClass(el);
-			this.setClass(el, (className ? className + ' ' : '') + name);
-		}
-	}
+  function create(tagName, className, container) {
 
-	function removeClass(el, name) {
-		if (el.classList !== undefined) {
-			el.classList.remove(name);
-		} else {
-			this.setClass(el, trim((' ' + this.getClass(el) + ' ').replace(' ' + name + ' ', ' ')));
-		}
-	}
+    var el = document.createElement(tagName);
+    el.className = className;
 
-	function setClass(el, name) {
-		if (el.className.baseVal === undefined) {
-			el.className = name;
-		} else {
-			// in case of SVG element
-			el.className.baseVal = name;
-		}
-	}
+    if (container) {
+      container.appendChild(el);
+    }
 
-	function getClass(el) {
-		return el.className.baseVal === undefined ? el.className : el.className.baseVal;
-	}
+    return el;
+  }
+
+  function getWindowSize() {
+    var docEl = document.documentElement,
+        IS_BODY_ACTING_ROOT = docEl && docEl.clientHeight === 0,
+        b = document.body;
+
+    // Used to feature test Opera returning wrong values
+    // for documentElement.clientHeight.
+
+    function isDocumentElementHeightOff() {
+      var d = document,
+          div = d.createElement('div'),
+          r;
+      div.style.height = "50000px";
+      d.body.insertBefore(div, d.body.firstChild);
+      r = d.documentElement.clientHeight > 49000;
+      d.body.removeChild(div);
+      return r;
+    }
+
+    if (typeof document.clientWidth === "number") {
+      return {
+        width: document.clientWidth,
+        height: document.clientHeight
+      };
+    } else if (IS_BODY_ACTING_ROOT || isDocumentElementHeightOff()) {
+      return {
+        width: b.clientWidth,
+        height: b.clientHeight
+      };
+    } else {
+      return {
+        width: docEl.clientWidth,
+        height: docEl.clientHeight
+      };
+    }
+  }
+
+  function offset(el) {
+    var rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+  }
 
 })();
