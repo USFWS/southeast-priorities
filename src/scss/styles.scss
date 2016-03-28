@@ -10,6 +10,7 @@
 @import "swipe";
 @import "icons";
 @import "nav";
+@import "lists";
 
 html {
   box-sizing: border-box;
@@ -67,4 +68,22 @@ img {
 
 footer {
   font-size: .6em;
+}
+
+#serviceFooter {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+#serviceFooter li {
+  display: inline-block;
+}
+
+#serviceFooter li::after {
+  content: ' |';
+}
+
+#serviceFooter li:last-child::after {
+  content: '';
 }
