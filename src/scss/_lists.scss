@@ -1,0 +1,30 @@
+.fade-list {
+
+  &:not(.show) {
+    li {
+      &:nth-child(1n+2) {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: 'Show more...';
+      color: $green;
+      display: block;
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  &:nth-child(1n+2) {
+    display: block;
+  }
+
+  &::after {
+    content: 'Show less...';
+    color: $green;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
