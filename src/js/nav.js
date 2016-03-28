@@ -2,7 +2,6 @@
   'use strict';
 
   // To Do:
-  //  - How do we address the zenscroll over-scrolling the heading w/docked nav?
   //  - Clicking the nav before it's fixed shouldn't active (open), just scroll
 
   var _ = require('./util');
@@ -54,7 +53,7 @@
 
   function _sticky(e) {
     // Maybe add a callback?
-    if (_getWindowWidth() > options.breakpoint) return;
+    // if (_getWindowWidth() > options.breakpoint) return;
     var fromTop = _getPosition(options.nextEl).y - options.marginTop;
 
     if ( fromTop <= 0 ) {
