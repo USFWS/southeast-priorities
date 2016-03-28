@@ -9,6 +9,7 @@
 @import "parallax";
 @import "swipe";
 @import "icons";
+@import "nav";
 
 html {
   box-sizing: border-box;
@@ -22,6 +23,12 @@ html {
 
 body {
   margin: 0;
+}
+
+.logo {
+  max-height: 250px;
+  position: relative;
+  top: 25%;
 }
 
 img {
@@ -48,10 +55,16 @@ img {
 }
 
 .section-heading {
-  font-size: 4em;
+  font-size: 5em;
+  line-height: 1em;
+  margin-bottom: 15px;
   text-align: center;
 }
 
 #skip-to-content {
   @include sr-only;
+}
+
+footer {
+  font-size: .6em;
 }

@@ -2,6 +2,20 @@
   @include container($max-width);
   padding: 0 40px;
 
+  p,
+  blockquote,
+  ul,
+  h3,
+  h4,
+  .caption {
+    margin: $base-spacing auto;
+    max-width: 700px;
+  }
+
+  svg {
+    max-width: 125px;
+  }
+
   @media (min-width: 1000px) {
     padding: 0;
   }
@@ -15,6 +29,6 @@
   }
 }
 
-.side-bar {
-  position: relative;
+.center {
+  text-align: center;
 }

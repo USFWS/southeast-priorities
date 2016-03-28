@@ -1,5 +1,6 @@
 .tipsy--w  {
   @include tipsy(w, $turquoise, 5px, 5px);
+  font-size: 18px;
 }
 
 .dot-nav {
@@ -8,7 +9,7 @@
   padding: 0;
   position: fixed;
   right: 20px;
-  top: 45vh;
+  top: 35vh;
 
   a {
     display: block;
@@ -18,18 +19,22 @@
 
   li {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
-    &.inactive {
+    &:not(.active) {
       background: url('../images/svg/inactive.svg');
-      height: 15px;
-      width: 15px;
+      height: 20px;
+      width: 20px;
     }
 
     &.active {
       background: url('../images/svg/active.svg');
-      height: 15px;
-      width: 15px;
+      height: 20px;
+      width: 20px;
     }
+  }
+
+  @media (max-width: $break-md) {
+    display: none;
   }
 }

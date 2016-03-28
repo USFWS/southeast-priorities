@@ -8,3 +8,11 @@
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

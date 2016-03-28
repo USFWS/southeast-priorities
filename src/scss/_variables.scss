@@ -1,19 +1,22 @@
 // Breakpoints
 $max-width: 900px;
+$break-md: 700px;
+$break-lg: 1100px;
+$break-xl: 1300px;
 
 // Colors
 $turquoise: #008C99;
 $light-blue: #99D1D6;
 $green: #5ac6a1;
 $gray: #777777;
-$base-font-color: #000;
+$base-font-color: #444;
 $action-color: $turquoise;
 
 // Fonts and Typography
 $sans-serif: 'Source Sans', Helvetica, 'Helvetica Neue', Arial, sans-serif;
 $serif: 'Merriweather', Georgia, Verdana, serif;
 
-$base-font-size: 1.2em;
+$base-font-size: 1.3em;
 $base-line-height: 1.5;
 $heading-line-height: 1.5;
 

@@ -1,0 +1,53 @@
+.mini-nav {
+  @media (min-width: $break-md) {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  background: $turquoise;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  transition: max-height .3s;
+
+  a {
+    color: white;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      background: $green;
+      text-shadow: 3px 3px black;
+    }
+  }
+
+  &.fixed {
+    box-shadow: 3px 3px 3px #111;
+    left: 0;
+    margin: 0;
+    max-height: 40px;
+    padding-top: 40px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    &.active {
+      max-height: 100vh;
+    }
+
+    &::before {
+      color: white;
+      content: 'Sections';
+      font-size: 1.2em;
+      font-weight: bold;
+      left: 0;
+      line-height: 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
