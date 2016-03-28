@@ -1,7 +1,5 @@
 .mini-nav {
-  @media (min-width: $break-md) {
-    display: none;
-  }
+  cursor: pointer;
 }
 
 .mobile-nav {
@@ -18,12 +16,11 @@
 
     &:hover {
       background: $green;
-      text-shadow: 3px 3px black;
     }
   }
 
   &.fixed {
-    box-shadow: 3px 3px 3px #111;
+    box-shadow: 0 3px 3px #111;
     left: 0;
     margin: 0;
     max-height: 40px;
