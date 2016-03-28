@@ -15,7 +15,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "browserify": "browserify index.js | uglifyjs -mc > ../../site/static/js/priorities.js",
     "watchify": "watchify index.js -o ../../site/static/js/priorities.js -dv",
-    "inspect:bundle": "browserify --full-paths index.js | uglifyjs -mc | Discify --open"
+    "inspect": "browserify --full-paths index.js | uglifyjs -mc | Discify --open"
   },
   "author": "Roy Hewitt, @r0yhewitt",
   "license": "SAX-PD",
@@ -23,7 +23,10 @@
     "d3": "^3.5.16",
     "events": "^1.1.0",
     "image-comparison": "^1.1.1",
+    "is-dom": "^1.0.5",
+    "lodash.debounce": "^4.0.3",
     "lodash.defaults": "^4.0.1",
+    "lodash.filter": "^4.2.1",
     "lodash.foreach": "^4.1.0",
     "parallaxify": "^0.1.1",
     "scrollreveal": "^3.1.1",
