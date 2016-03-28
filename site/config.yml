@@ -1,3 +1,4 @@
 baseurl: "/"
 lang: "en-us"
 title: "Southeast Region Priorities | U.S. Fish and Wildlife Service"
+canonifyurls: true
