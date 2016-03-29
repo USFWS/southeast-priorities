@@ -21,7 +21,7 @@
     images.forEach(function (name) {
       var img = sharp(input + name);
       img
-        .resize(1400)
+        .resize(1100)
         .toBuffer(function (err, buffer, info) {
           if (err) console.error(err);
           jpegmin(buffer, name);
