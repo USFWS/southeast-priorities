@@ -1,6 +1,6 @@
 = content main
 
-  a href="http://fws.gov/southeast"
+  a href="http://fws.gov/southeast" title="Go to the Southast Region Homepage"
     figure.js-Parallaxify style="background-image: url('../images/hero/hero-intro.jpg');"
       img.logo src="./images/svg/logo.svg" alt="The official logo of the U.S. Fish and Wildlife Service"
 
@@ -23,20 +23,58 @@
   .layout
     p We live and work in an amazing part of the country. The Southeastern United States is among the most biologically diverse hotspots in the world. Our Region includes Caribbean and coastal islands, marshes, coral reefs, the Appalachian and Ozark Mountains, caves, and longleaf and shortleaf pine and bottomland hardwood forests. Our work ensures that fish and wildlife populations continue in those places for the benefit of the American people.
 
-    img.reveal src="./images/southeastern-species.jpg" alt="Graph of the proportion of U.S. Species that occurr in the Southeast Region"
+    .species-chart
+      img.reveal src="./images/southeastern-species-chart.svg"
+
     p.caption.reveal Sources: NatureServe, &nbsp;
       a href="http://srs.fs.usda.gov/futures/technical-report/14.html#top" target="_blank" U.S. Forest Service&rsquo;s Southern Research Station in Asheville.
 
-    p In the Southeast, the Service is in the midst of a period where the magnitude of conservation challenges facing America’s fish and wildlife resources can be daunting. Accelerating housing development, sea-level rise, more intense storms, increased land use changes, habitat loss and fragmentation, increased occurrence and abundance of invasive species, poorer water quality, a public largely disconnected from nature, and many other issues create noteworthy challenges for those of us charged with conserving and protecting these resources. About 92% of the land in the Southeast is in private ownership creating both opportunities and challenges. History shows that our Nation faced challenges before, e.g., the Dust Bowl era of the 1930s, and we have always risen up to meet those challenges.
+    p In the Southeast, the Service is in the midst of a period where the magnitude of conservation challenges facing America’s fish and wildlife resources can be daunting.
 
-    .slide-wrapper.reveal
-      .image-comparison
-        img.comparison-image src="./images/urban-sprawl-1.jpg" alt="Map of urban areas from 2009"
-        img.comparison-image src="./images/urban-sprawl-2.jpg" alt="Map of projected urbanization by 2060"
-      p.caption
-        strong Use your mouse to drag the green divider left/right to see the projected change in urbanization.
-        br On left, the initial urban land cover in 2009. On right, projected urban land cover in 2060.&nbsp;
-        a href="#footer" (See source)
+    .center
+
+      p Accelerating housing development,
+
+      img.reveal src="./images/downtown-miami.jpg" alt="Photo from the air in downtown Miami showing lots of construction"
+
+      p sea-level rise,
+
+      img.reveal src="./images/alligator-river-flood.jpg" alt="Dead tree trunks emerge from the shallow waters that border Alligator River National Wildlife Refuge"
+
+      p more intense storms,
+
+      img.reveal src="./images/pea-island-breaches.jpg" alt="An aerial photograph showing four breaches with on inlet in NC 12 on Pea Island National Wildlife Refuge"
+
+      p increased land use changes,
+
+      .slide-wrapper.reveal
+        .image-comparison
+          img.comparison-image src="./images/urban-sprawl-1.jpg" alt="Map of urban areas from 2009"
+          img.comparison-image src="./images/urban-sprawl-2.jpg" alt="Map of projected urbanization by 2060"
+        p.caption
+          strong Use your mouse to drag the green divider left/right to see the projected change in urbanization.
+          br On left, the initial urban land cover in 2009. On right, projected urban land cover in 2060.&nbsp;
+          a href="#footer" (See source)
+
+      p habitat loss and fragmentation,
+
+      img.reveal src="./images/monarch.jpg" alt="A monarch butterfly perched on the bright pink flowers of a swamp milkweed plant on Sand Lake National Wildlife Refuge"
+
+      p increased occurrence and abundance of invasive species,
+
+      img.reveal src="./images/mountain-pine-beetle.jpg" alt="A thick coniferous forest shows signs of distress due to a Mountain pine beetle infestation"
+
+      p poorer water quality,
+
+      img.reveal src="./images/waterkeeper-alliance.jpg" alt="The after effects of the Dan River coal ash spill in North Carolina"
+
+      p a public largely disconnected from nature,
+
+      img.reveal src="./images/times-square.jpg" alt="The crowded streets and sidewalks of New York City's Times Square"
+
+      p and many other issues create noteworthy challenges for those of us charged with conserving and protecting these resources.
+
+    p About 92% of the land in the Southeast is in private ownership creating both opportunities and challenges. History shows that our Nation faced challenges before, e.g., the Dust Bowl era of the 1930s, and we have always risen up to meet those challenges.
 
     p With a conservation goal of ensuring self-sustaining populations of native fish and wildlife across landscapes, the Service has a clear responsibility to provide leadership in addressing these challenges.
 
@@ -114,8 +152,7 @@
         = include svg/globe.svg
       p Our goal is to ensure the future of natural resource conservation by connecting people with nature.
 
-    p
-      em Our reputation and credibility will be based on our vision, our conservation principles, our priorities and the discipline to make them real. These will be the foundation for shaping our future, and drive decisions about where we should allocate the majority of our people and resources.
+    blockquote Our reputation and credibility will be based on our vision, our conservation principles, our priorities and the discipline to make them real. These will be the foundation for shaping our future, and drive decisions about where we should allocate the majority of our people and resources.
 
   h2.section-heading Our Business Approach to Conservation
 
@@ -200,11 +237,7 @@
 
     p Therein lies the urgency of our work for our children and the next generation.
 
-    p
-      em As a conservation agency, wild places and wild things are often the primary focus of what we do on a day-to-day basis, but we must often stop to remind ourselves that it is people who are essential to our success.
-
-    p
-      em Our mission begins and ends with people. It is our employees, partners, and volunteers who provide the skills, creativity, dedication, and innovation that allow us to accomplish all of the things that we do.
+    blockquote As a conservation agency, wild places and wild things are often the primary focus of what we do on a day-to-day basis, but we must often stop to remind ourselves that it is people who are essential to our success. <br><br> Our mission begins and ends with people. It is our employees, partners, and volunteers who provide the skills, creativity, dedication, and innovation that allow us to accomplish all of the things that we do.
 
   h2.section-heading Our Regional Priorities
 
