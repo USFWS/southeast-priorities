@@ -20,7 +20,7 @@
     "svgo": "svgo -f src/images/svg -o site/layouts/svg",
     "prehero": "rimraf site/static/images/hero",
     "hero": "node build/resize-hero",
-    "jpg": "imagemin src/images/other site/static/images -P jpegtran",
+    "jpg": "node build/resize-img",
     "img": "npm run jpg && npm run hero && npm run svgo",
     "test": "echo \"Error: no test specified\" && exit 1",
     "mkdist": "node build/create-dist",
