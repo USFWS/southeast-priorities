@@ -62,6 +62,11 @@ img {
   text-align: center;
 }
 
+.species-chart {
+  margin: auto;
+  max-width: 600px;
+}
+
 #skip-to-content {
   @include sr-only;
 }
