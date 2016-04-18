@@ -1,0 +1,16 @@
+.caption {
+  display: table;
+  margin-top: 0 !important;
+
+  img {
+    display: block;
+  }
+
+  figcaption {
+    color: lighten($gray, 10);
+    display: table-caption;
+    caption-side: bottom;
+    font-size: .8em;
+    text-align: right;
+  }
+}
