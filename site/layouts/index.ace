@@ -33,19 +33,25 @@
 
     .center
 
-      p Accelerating housing development,
+      p.inline-image-caption Accelerating housing development,
 
-      img.reveal src="./images/downtown-miami.jpg" alt="Photo from the air in downtown Miami showing lots of construction"
+      figure.caption
+        img.reveal src="./images/urban-development.jpg" alt="Forest cleared to make way for a low-density housing development"
+        figcaption.reveal Housing development in Metro Atlanta
 
-      p sea-level rise,
+      p.inline-image-caption sea-level rise,
 
-      img.reveal src="./images/alligator-river-flood.jpg" alt="Dead tree trunks emerge from the shallow waters that border Alligator River National Wildlife Refuge"
+      figure.caption
+        img.reveal src="./images/alligator-river-flood.jpg" alt="Dead tree trunks emerge from the shallow waters that border Alligator River National Wildlife Refuge"
+        figcaption.reveal Alligator River National Wildlife Refuge
 
-      p more intense storms,
+      p.inline-image-caption more intense storms,
 
-      img.reveal src="./images/pea-island-breaches.jpg" alt="An aerial photograph showing four breaches with on inlet in NC 12 on Pea Island National Wildlife Refuge"
+      figure.caption
+        img.reveal src="./images/pea-island-breaches.jpg" alt="An aerial photograph showing four breaches with on inlet in NC 12 on Pea Island National Wildlife Refuge"
+        figcaption.reveal Pea Island National Wildlife Refuge
 
-      p increased land use changes,
+      p.inline-image-caption increased land use changes,
 
       .slide-wrapper.reveal
         .image-comparison
@@ -56,21 +62,29 @@
           br On left, the initial urban land cover in 2009. On right, projected urban land cover in 2060.&nbsp;
           a href="#footer" (See source)
 
-      p habitat loss and fragmentation,
+      p.inline-image-caption habitat loss and fragmentation,
 
-      img.reveal src="./images/monarch.jpg" alt="A monarch butterfly perched on the bright pink flowers of a swamp milkweed plant on Sand Lake National Wildlife Refuge"
+      figure.caption
+        img.reveal src="./images/monarch.jpg" alt="A monarch butterfly perched on the bright pink flowers of a swamp milkweed plant on Sand Lake National Wildlife Refuge"
+        figcaption.reveal A monarch butterfly on a swamp milkweed plant
 
-      p increased occurrence and abundance of invasive species,
+      p.inline-image-caption increased occurrence and abundance of invasive species,
 
-      img.reveal src="./images/mountain-pine-beetle.jpg" alt="A thick coniferous forest shows signs of distress due to a Mountain pine beetle infestation"
+      figure.caption
+        img.reveal src="./images/flathead-catfish.jpg" alt="Two biologists holding a massive catfish by the gills roughly half of their size"
+        figcaption.reveal An invasive flathead catfish
 
-      p poorer water quality,
+      p.inline-image-caption poorer water quality,
 
-      img.reveal src="./images/waterkeeper-alliance.jpg" alt="The after effects of the Dan River coal ash spill in North Carolina"
+      figure.caption
+        img.reveal src="./images/water-quality-lake-okeechobee.jpg" alt="Dark water discharge from Lake Okeechobee mixing with pristine blue water"
+        figcaption.reveal Poor water quality along Florida's coast
 
-      p a public largely disconnected from nature,
+      p.inline-image-caption a public largely disconnected from nature,
 
-      img.reveal src="./images/times-square.jpg" alt="The crowded streets and sidewalks of New York City's Times Square"
+      figure.caption
+        img.reveal src="./images/times-square.jpg" alt="The crowded streets and sidewalks of New York City's Times Square"
+        figcaption.reveal Times Square, New York City
 
       p and many other issues create noteworthy challenges for those of us charged with conserving and protecting these resources.
 
@@ -156,7 +170,7 @@
 
   h2.section-heading Our Business Approach to Conservation
 
-  figure.js-Parallaxify.hero-our-story style="background-image: url('../images/hero/hero-business.jpg');"
+  figure.js-Parallaxify.hero-our-story style="background-image: url('../images/hero/usfws-firefighter.jpg');"
 
   .layout
     p Whether your position is in a biological, administrative or any other series, the adaptive management approach (also called lessons learned) applies to your position. The Service’s framework for adaptive management is called Strategic Habitat Conservation which helped put focus on our foundational business approach (plan, design, implement, and monitor) to achieve landscape and watershed scale conservation.
@@ -178,44 +192,44 @@
   figure.js-Parallaxify style="background-image: url('../images/hero/hero-goal.jpg');"
 
   .layout.center
-    p Time is urgent. We must act now.
+    p.inline-image-caption Time is urgent. We must act now.
     div.reveal
       = include svg/clock.svg
 
-    p Cities are getting bigger.
+    p.inline-image-caption Cities are getting bigger.
     div.reveal
       = include svg/building.svg
 
-    p Rural communities are getting smaller.
+    p.inline-image-caption Rural communities are getting smaller.
     div.reveal
       = include svg/home.svg
     // img.icon.arrow-down src="./images/svg/arrow-up.svg" alt="Arrow down icon"
 
-    p Sea levels are rising.
+    p.inline-image-caption Sea levels are rising.
     div.reveal
       = include svg/anchor.svg
 
-    p Storms are becoming shorter and more intense.
+    p.inline-image-caption Storms are becoming shorter and more intense.
     div.reveal
       = include svg/lightning.svg
 
-    p Land use changes are occurring rapidly.
+    p.inline-image-caption Land use changes are occurring rapidly.
     div.reveal
       = include svg/map.svg
 
-    p The pace of habitat loss and fragmentation is increasing.
+    p.inline-image-caption The pace of habitat loss and fragmentation is increasing.
     div.reveal
       = include svg/graph.svg
 
-    p The increased occurrence and abundance of invasive species are consuming natural resources at an alarming rate.
+    p.inline-image-caption The increased occurrence and abundance of invasive species are consuming natural resources at an alarming rate.
     div.reveal
       = include svg/paw.svg
 
-    p Poor water quality and competing demands for water are a growing challenge for our Region's people and its fish and wildlife simultaneously.
+    p.inline-image-caption Poor water quality and competing demands for water are a growing challenge for our Region's people and its fish and wildlife simultaneously.
     div.reveal
       = include svg/warning.svg
 
-    p And finally the pressures of society have disconnected large chunks of our region’s population from nature and the outdoors.
+    p.inline-image-caption And finally the pressures of society have disconnected large chunks of our region’s population from nature and the outdoors.
     div.reveal
       = include svg/binoculars.svg
 
@@ -225,7 +239,7 @@
 
     p It gives us a reference point to crystalize our desire to influence what the desired future landscape across the Southeast might look like and also a way to begin measuring the effectiveness of our efforts.
 
-  img.reveal src="./images/hero/emerging-megaregions-map-FHWA.jpg" style="width:100%;"
+  img.reveal src="./images/hero/emerging-megaregions-map-FHWA.jpg" alt="Map of emerging 'Megaregions' throughout the Nation" style="width:100%;"
 
   .layout
 
@@ -237,18 +251,27 @@
 
     p Therein lies the urgency of our work for our children and the next generation.
 
-    blockquote As a conservation agency, wild places and wild things are often the primary focus of what we do on a day-to-day basis, but we must often stop to remind ourselves that it is people who are essential to our success. <br><br> Our mission begins and ends with people. It is our employees, partners, and volunteers who provide the skills, creativity, dedication, and innovation that allow us to accomplish all of the things that we do.
+    blockquote As a conservation agency, wild places and wild things are often the primary focus of what we do on a day-to-day basis, but we must often stop to remind ourselves that it is people who are essential to our success.
+
+    figure.caption
+      a href="https://flic.kr/p/n8MX1V" target="_blank"
+        img.reveal src="./images/law-enforcement.jpg" alt="A law enforcement officer holding a seized baby alligator"
+      figcaption Baby alligator seized by Law Enforcement
+
+    blockquote Our mission begins and ends with people. It is our employees, partners, and volunteers who provide the skills, creativity, dedication, and innovation that allow us to accomplish all of the things that we do.
 
   h2.section-heading Our Regional Priorities
 
-  figure.js-Parallaxify.hero-our-story style="background-image: url('../images/hero/hero-regional.jpg');"
+  figure.js-Parallaxify.hero-our-story style="background-image: url('../images/hero/southeast-satellite.jpg');"
 
   .layout
     p Building on more than a century of conservation, the Southeast Region continues to refine and adapt our complex and innovative portfolio of conservation tools to deal with the challenges of the 21st century. The following three broad priorities and components are intended to focus our efforts for furthering our mission and conservation goals. Programs will use these priorities to develop goals and activities.
 
     p The challenges of today have outgrown any single agency approach. It will take a combined effort of many public and private organizations to deal with the landscape‐scale issues facing us all. Moreover, we must be ever vigilant to engage our communities and inspire our public to be natural resource stewards whose support is essential to long-term success.
 
-    img.reveal src="./images/ding-darling-iNature-trail.jpg" alt="A USFWS employee shows a group of children the iNature app at a National Wildlife Refuge"
+    figure.caption
+      img.reveal src="./images/ding-darling-iNature-trail.jpg" alt="A USFWS employee shows a group of children the iNature app at a National Wildlife Refuge"
+      figcaption.reveal Ranger with children at Ding Darling National Wildlife Refuge
 
     p We will promote <strong>hunting, fishing, wildlife observation, and nature photography</strong> as a means to connect people with nature and provide for sustainable resource utilization. Similarly, we will encourage <strong>environmental education programs and interpretive resources</strong> to raise awareness of our mission, how we implement it, and how it benefits the public. We must continue to expand on existing, and seek out new <strong>outreach efforts and recreational opportunities</strong> in order to remain relevant to the American people and generate the appreciation and enthusiasm that is needed to fuel the next generation of conservationists.
 
@@ -259,7 +282,9 @@
       li Support employee professional development.
       li Recruit and retain a highly qualified, diverse and highly engaged workforce.
 
-    img.reveal src="./images/student-conservation-association.jpg" alt="A group of students poses for a photo in front a a stream"
+    figure.caption
+      img.reveal src="./images/student-conservation-association.jpg" alt="A group of students poses for a photo in front a a stream"
+      figcaption.reveal Student Conservation Association
 
     p
       em Examples
@@ -279,7 +304,9 @@
       li Maintain our collaboration with State Fish and Wildlife Agencies and other Federal Agencies.
       li Increase our collaboration with international governments, non‐governmental conservation organizations and private landowners.
 
-    img.reveal src="./images/priorities-partners.jpg" alt="A biologist wearing a yellow hard hat in a forest"
+    figure.caption
+      img.reveal src="./images/priorities-partners.jpg" alt="A biologist wearing a yellow hard hat in a forest"
+      figcaption.reveal North Carolina Wildlife Resource Commission
 
     p
       em Examples
@@ -298,7 +325,9 @@
       li Increase our efforts in urban areas.
       li Increase our support for volunteers and Friends Groups.
 
-    img.reveal src="./images/priorities-public.jpg" alt="Elementary school students pose for a photo holding a sea turtle"
+    figure.caption
+      img.reveal src="./images/priorities-public.jpg" alt="Elementary school students pose for a photo holding a sea turtle"
+      figcaption.reveal Elementary school students posing with a sea turtle
 
     p
       em Examples
@@ -314,7 +343,9 @@
 
     p We work across broad Southeastern landscapes and watersheds to address complex conservation challenges. This effort is called <strong>“All Hands, All Lands*, All Wildlife,”</strong> which describes the collective work of all employees across our ten state and Caribbean islands region. We work with partners and the public on a landscape and watershed scale to protect, conserve, and enhance our unique land and water systems.
 
-    img.reveal src="./images/canoeing-at-pea-island.jpg" alt="A group of canoers navigates a narrow stream"
+    figure.caption
+      img.reveal src="./images/canoeing-at-pea-island.jpg" alt="A group of canoers navigates a narrow stream"
+      figcaption.reveal Pea Island National Wildlife Refuge
 
     p Using Strategic Habitat Conservation as the foundation to our business approach, we acquire, manage and restore aquatic, wetland, and terrestrial resources on our National Wildlife Refuges and National Fish Hatcheries and provide technical assistance on other public and private lands as the Southeast tackles the challenges of urbanization, habitat conversion, climate change, invasive species, etc. We will strive for excellence in our landscape and watershed scale initiatives and will be regarded as trusted conservation leaders.
 
@@ -351,7 +382,9 @@
       li Continue to protect and recover threatened and endangered species, including federal, state, and CITES.
       li Continue to protect, restore, and manage birds of conservation concern.
 
-    img.reveal src="./images/priorities-at-risk.jpg" alt="A monarch butterfly collecting nectar from a bright purple flower"
+    figure.caption
+      img.reveal src="./images/barrens-darter.jpg" alt="A greyish brown fish in front of a rocky backdrop"
+      figcaption.reveal Barrens darter
 
     p
       em Examples
@@ -367,7 +400,10 @@
     ul
       li Continue to conserve common species includes migratory and interjurisdictional fish and wildlife
 
-    img.reveal src="./images/priorities-just-right.jpg" alt="A close-up photo of a bald eagle's head and beak"
+    figure.caption
+      a href="https://flic.kr/p/bErwev" target="_blank"
+        img.reveal src="./images/river-otter.jpg" alt="A North American river otter laying on it's back"
+      figcaption.reveal North American river otter
 
     p
       em Examples
@@ -382,7 +418,9 @@
     ul
       li Continue to reduce overabundant fish, wildlife, and plants - includes invasive species.
 
-    img.reveal src="./images/priorities-too-many.jpg" alt="A wild hog with dark hair looks towards the photographer"
+    figure.caption
+      img.reveal src="./images/priorities-too-many.jpg" alt="A wild hog with dark hair looks towards the photographer"
+      figcaption.reveal Wild hogs at Merrit Island National Wildlife Refuge
 
     p
       em Examples
