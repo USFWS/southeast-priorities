@@ -32,8 +32,9 @@
     "build:sass": "node-sass --output-style compressed src/scss/styles.scss | postcss -u autoprefixer -o site/static/css/styles.css",
     "serve": "browser-sync start --server dist --files 'dist/**/*'",
     "publish:demo": "npm run build && gh-pages -d dist",
+    "replacehero": "node build/build",
     "prebuild": "rimraf dist/* && npm run mkdist",
-    "build": "npm run build:sass && npm run img && npm run hugo:pro",
+    "build": "npm run build:sass && npm run img && npm run hugo:pro && npm run replacehero",
     "build:stage": "npm run build:sass && npm run img && npm run hugo:stage && npm run stage",
     "prestart": "npm run mkdist",
     "start": "npm run watch:sass & npm run img & npm run hugo:dev & npm run watch & npm run serve"
